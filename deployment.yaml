@@ -30,6 +30,6 @@ spec:
     spec:
       containers:
         - name: my-node-app-container 
-          image: $ACR_DNS/with-reg-build
+          image: adityaregistry.azurecr.io/with-reg-build
           ports:
             - containerPort: 4000
