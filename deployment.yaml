@@ -30,6 +30,6 @@ spec:
     spec:
       containers:
         - name: my-node-app-container 
-          image: adityaprabhakara/my-node-app
+          image: $ACR_DNS/with-reg-build
           ports:
             - containerPort: 4000
