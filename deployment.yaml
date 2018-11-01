@@ -22,7 +22,7 @@ kind: Deployment
 metadata:
   name: with-reg-deployment 
 spec:
-  replicas: 10
+  replicas: 2
   template:
     metadata:
       labels:
