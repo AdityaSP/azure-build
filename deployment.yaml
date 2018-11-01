@@ -2,10 +2,10 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: my-node-app-service 
+  name: with-reg-service 
 spec:
   selector:
-    app: my-node-app
+    app: with-reg
   ports:
     - protocol: "TCP"
       # Port accessible inside cluster
@@ -13,20 +13,20 @@ spec:
       # Port to forward to inside the pod
       targetPort: 4000
       # Port accessible outside cluster
-      nodePort: 30002
+      nodePort: 30005
   type: LoadBalancer
  
 ---
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: my-node-app-deployment 
+  name: with-reg-deployment 
 spec:
   replicas: 10
   template:
     metadata:
       labels:
-        app: my-node-app
+        app: with-reg
     spec:
       containers:
         - name: my-node-app-container 
